@@ -2,9 +2,12 @@ import { createGlobalStyle } from "styled-components";
 import Fonts from "./Fonts";
 
 const GlobalStyles = createGlobalStyle`
-    ${Fonts}
+    ${Fonts};
 
     body {
+
+font-family: 'Poppins', sans-serif;
+
     /* margin: 0;
     width: 100%;
     min-height: 100%;
@@ -13,7 +16,8 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     color: var(--slate); */
     background-color: blueviolet;
-    font-family: PoppinsBold;
+    
+    font-weight: 400;
     }
 `;
 
