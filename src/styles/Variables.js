@@ -16,11 +16,16 @@ const Variables = css`
             rgba(100, 255, 218, 0.4) 100%
         );
 
+        --shadow-header: 0px 10px 25px -10px #0d0f13;
+        --shadow-block: 1px 4px 8px #0d0f13;
+        --shadow-active-green-xs: 0px 0px 2px #64ffda;
+        --shadow-active-green-s: 0px 0px 3px #64ffda;
+        --shadow-active-green: 0px 0px 3px 1px #64ffda;
+
         --font-poppins: "Poppins", sans-serif;
 
-        --color-transparentBlack: rgba(0, 0, 0, 0.73);
-        --color-transparentGrey: rgba(57, 55, 72, 0.22);
-        --shadow-boxShadow: 0px 4px 35px 0px rgba(168, 172, 176, 0.19);
+        --border-radius: 5px;
+        --border-radius-big: 20px;
     }
 `;
 

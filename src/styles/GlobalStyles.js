@@ -1,23 +1,31 @@
 import { createGlobalStyle } from "styled-components";
 import Fonts from "./Fonts";
+import Variables from "./Variables";
 
 const GlobalStyles = createGlobalStyle`
     ${Fonts};
+    ${Variables};
+
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        width: 100%;
+        scroll-behavior: smooth;
+    }
 
     body {
-
-font-family: 'Poppins', sans-serif;
-
-    /* margin: 0;
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    color: var(--slate); */
-    background-color: blueviolet;
-    
-    font-weight: 400;
+        width: 100%;
+        min-height: 100%;
+        background-color: var(--dark-gray-body);
+        color: var(--white);
+        font-family: var(--font-poppins);
+        overflow-x: hidden;
     }
 `;
 
