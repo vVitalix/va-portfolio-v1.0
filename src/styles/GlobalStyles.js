@@ -6,17 +6,18 @@ const GlobalStyles = createGlobalStyle`
     ${Fonts};
     ${Variables};
 
+    html {
+        width: 100%;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+
     *,
     *::before,
     *::after {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-    }
-
-    html {
-        width: 100%;
-        scroll-behavior: smooth;
+        box-sizing: inherit;
     }
 
     body {
@@ -25,7 +26,15 @@ const GlobalStyles = createGlobalStyle`
         background-color: var(--dark-gray-body);
         color: var(--white);
         font-family: var(--font-poppins);
+        font-size: var(--fs-sm);
         overflow-x: hidden;
+    }
+
+    #root {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        grid-template-columns: 100%;
     }
 `;
 

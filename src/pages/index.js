@@ -1,12 +1,13 @@
 import * as React from "react";
 //COMPONENTS
-import Layout from "../components/Layout";
+import { Layout } from "../components";
 
-export default function Home() {
-    return (
-        <>
+const Home = () => (
+    <Layout>
+        <main>
             <h1>Hey, Moon!</h1>
-            <Layout>1111111111111111</Layout>
-        </>
-    );
-}
+        </main>
+    </Layout>
+);
+
+export default Home;

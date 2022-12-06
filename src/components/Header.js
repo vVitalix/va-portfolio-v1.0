@@ -1,10 +1,31 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { Link } from "gatsby";
 
-const Header = props => {
-    return <div>Header</div>;
-};
+import { navLinks } from "../config";
+//COMPONENTS
+import { LogoIcon } from "./icons";
+//STYLES
+import StyledHeader from "../styles/Header.styled";
 
-Header.propTypes = {};
+const Header = props => (
+    <StyledHeader>
+        <nav>
+            <div className="logo-container">
+                <a href="/" aria-label="intro">
+                    <LogoIcon />
+                </a>
+            </div>
+
+            <ul>
+                {navLinks &&
+                    navLinks.map(({ url, name }, index) => (
+                        <li key={index}>
+                            <Link to={url}>{name}</Link>
+                        </li>
+                    ))}
+            </ul>
+        </nav>
+    </StyledHeader>
+);
 
 export default Header;

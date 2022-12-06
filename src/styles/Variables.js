@@ -24,6 +24,15 @@ const Variables = css`
 
         --font-poppins: "Poppins", sans-serif;
 
+        --fs-xxs: 0.875rem;
+        --fs-xs: 1rem;
+        --fs-sm: 1.125rem;
+        --fs-md: 1.25rem;
+        --fs-lg: 1.5rem;
+        --fs-xl: 1.75rem;
+        --fs-xxl: 2.5rem;
+        --fs-heading: 4rem;
+
         --border-radius: 5px;
         --border-radius-big: 20px;
     }
