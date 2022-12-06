@@ -6,18 +6,21 @@ const GlobalStyles = createGlobalStyle`
     ${Fonts};
     ${Variables};
 
+    html {
+        width: 100%;
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+    }
+
     *,
     *::before,
     *::after {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
+        box-sizing: inherit;
     }
 
-    html {
-        width: 100%;
-        scroll-behavior: smooth;
-    }
+    
 
     body {
         width: 100%;
@@ -25,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
         background-color: var(--dark-gray-body);
         color: var(--white);
         font-family: var(--font-poppins);
+        font-size: var(--fs-sm);
         overflow-x: hidden;
     }
 `;
