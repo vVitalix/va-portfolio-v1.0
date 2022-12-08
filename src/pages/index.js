@@ -5,7 +5,13 @@ import { Layout } from "../components";
 const Home = () => (
     <Layout>
         <main>
-            <h1>Hey, Moon!</h1>
+            <section>
+                <h1>Hey, Moon!</h1>
+                <h1>Hey, Moon!</h1>
+                <h1>Hey, Moon!</h1>
+                <h1>Hey, Moon!</h1>
+                <h1>Hey, Moon!</h1>
+            </section>
         </main>
     </Layout>
 );
