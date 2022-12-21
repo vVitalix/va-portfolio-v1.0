@@ -10,10 +10,15 @@ const Variables = css`
         --pink: #ff649c;
         --green: #64ffda;
         --faded-green: rgba(100, 255, 218, 0.4);
-        --linear-green: linear-gradient(
+        --linear-green-left: linear-gradient(
             90deg,
             #64ffda 0%,
             rgba(100, 255, 218, 0.4) 100%
+        );
+        --linear-green-right: linear-gradient(
+            90deg,
+            rgba(100, 255, 218, 0.4) 0%,
+            #64ffda 100%
         );
 
         --shadow-header: 0px 10px 25px -10px #0d0f13;
@@ -36,7 +41,7 @@ const Variables = css`
         --border-radius: 5px;
         --border-radius-big: 20px;
 
-        --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        --transition: all 0.25s cubic-bezier(0.65, 0.05, 0.35, 1);
     }
 `;
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const StyledHeader = styled.header`
     ${({ theme }) => theme.mixins.flexCenter}
@@ -9,8 +9,27 @@ const StyledHeader = styled.header`
     height: 5rem;
     background-color: rgba(19, 19, 23, 0.85);
     backdrop-filter: blur(5px);
-    box-shadow: var(--shadow-header);
     z-index: 10;
+    transition: var(--transition);
+
+    ${props =>
+        props.scrollDirection === "up" &&
+        !props.scrolledToTop &&
+        css`
+            height: 4.375rem;
+            transform: translateY(0px);
+            background-color: rgba(19, 19, 23, 0.85);
+            box-shadow: var(--shadow-header);
+        `};
+
+    ${props =>
+        props.scrollDirection === "down" &&
+        !props.scrolledToTop &&
+        css`
+            height: 4.375rem;
+            transform: translateY(calc(4.375rem * -1));
+            box-shadow: var(--shadow-header);
+        `};
 
     nav {
         ${({ theme }) => theme.mixins.flexBetween}

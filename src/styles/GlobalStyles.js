@@ -56,15 +56,53 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a {
+        position: relative;
         display: inline-block;
         color: inherit;
         text-decoration: none;
         transition: var(--transition);
 
-        &:hover,
         &:focus {
             color: var(--green);
+
+            &:hover {
+                color: var(--green);
+            }
         }
+  
+        &:hover {
+            color: var(--faded-green);
+     
+            &::after,
+            &::before {
+                width: 100%;
+                left: 0;
+            }
+        }
+  
+        &::after,
+        &::before {
+            content: ''; 
+            position: absolute;
+            top: calc(100% + 5px);
+            width: 0;
+            right: 0;
+            height: 2px;
+        }
+  
+        &::before {
+            transition: var(--transition) 0.1s;
+            background: var(--linear-green-right);
+        }
+  
+        &::after {
+            transition: var(--transition);
+            background: var(--green);
+        }
+    }
+
+    #content {
+        height: 2500px;
     }
 `;
 
