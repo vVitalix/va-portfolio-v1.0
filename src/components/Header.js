@@ -7,6 +7,34 @@ import useScrollDirection from "../hooks/useScrollDirection";
 import { LogoIcon } from "./icons";
 //STYLES
 import StyledHeader from "../styles/Header.styled";
+//ANIMATIONS
+import { motion } from "framer-motion";
+
+//Variants
+const listVariants = {
+    show: {
+        transition: {
+            staggerChildren: 0.12,
+        },
+    },
+};
+
+const listItemVariants = {
+    hidden: {
+        opacity: 0,
+        y: -20,
+        color: "#64ffda",
+    },
+    show: {
+        opacity: 1,
+        y: 0,
+        color: "#fff7fa",
+        transition: {
+            ease: [0.65, 0.05, 0.35, 1],
+            duration: 0.35,
+        },
+    },
+};
 
 const Header = props => {
     // const [isMounted, setIsMounted] = useState(!isHome);
@@ -42,14 +70,18 @@ const Header = props => {
                     </a>
                 </div>
 
-                <ul>
+                <motion.ul
+                    variants={listVariants}
+                    initial="hidden"
+                    animate="show"
+                >
                     {navLinks &&
                         navLinks.map(({ url, name }, index) => (
-                            <li key={index}>
+                            <motion.li variants={listItemVariants} key={index}>
                                 <Link to={url}>{name}</Link>
-                            </li>
+                            </motion.li>
                         ))}
-                </ul>
+                </motion.ul>
             </nav>
         </StyledHeader>
     );

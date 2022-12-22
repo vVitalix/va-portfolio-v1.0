@@ -6,7 +6,7 @@ const StyledHeader = styled.header`
     top: 0;
     left: 0;
     width: 100%;
-    height: 5rem;
+    height: 5.5rem;
     background-color: rgba(19, 19, 23, 0.85);
     backdrop-filter: blur(5px);
     z-index: 10;
